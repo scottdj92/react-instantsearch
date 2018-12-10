@@ -4,9 +4,7 @@ import Router from 'next/router';
 import qs from 'qs';
 import { Head, AppProvider, findResultsState, AppSearch } from '../components';
 
-
-
-export default class extends React.Component {
+class App extends React.Component {
   static propTypes = {
     resultsState: PropTypes.object,
   };
@@ -24,7 +22,7 @@ export default class extends React.Component {
       },
     };
 
-    const resultsState = await findResultsState(AppProvider, { searchState });
+    const resultsState = await findResultsState(App, { searchState });
     console.log(resultsState);
     return { resultsState, searchState };
   }
@@ -45,3 +43,5 @@ export default class extends React.Component {
     );
   }
 }
+
+export default App;
