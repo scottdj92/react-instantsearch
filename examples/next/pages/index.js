@@ -18,7 +18,12 @@ export default class extends React.Component {
      to initialize the searchState.
   */
   static async getInitialProps() {
-    const searchState = { refinementList: ["Cell Phones"] }
+    const searchState = {
+      refinementList: {
+        categories: ['Cell Phones', 'Appliances']
+      },
+    };
+
     const resultsState = await findResultsState(AppProvider, { searchState });
     console.log(resultsState);
     return { resultsState, searchState };
