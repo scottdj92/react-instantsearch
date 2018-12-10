@@ -12,6 +12,7 @@ node_modules
 /.next
 
 # misc
+/.vscode
 .DS_Store
 .env
 npm-debug.log*
