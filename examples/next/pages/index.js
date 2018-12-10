@@ -30,6 +30,7 @@ export default class extends React.Component {
         <Head title="Home" />
         <div>
           <AppProvider
+            searchState={this.props.searchState}
             resultsState={this.props.resultsState}
             onSearchStateChange={this.onSearchStateChange}>
               <AppSearch />
